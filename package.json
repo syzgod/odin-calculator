@@ -1,0 +1,27 @@
+{
+  "name": "odin-calculator",
+  "version": "1.0.0",
+  "description": "The Odin Project Calculator",
+  "main": "./src/index.js",
+  "scripts": {
+    "buildcss": "npx tailwindcss -i ./src/input.css -o ./public/public.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syzgod/odin-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syzgod/odin-calculator/issues"
+  },
+  "homepage": "https://github.com/syzgod/odin-calculator#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}

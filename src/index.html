@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/public.css" />
+    <script src="./src/index.js" defer></script>
+    <title>The Mighty Calculator</title>
+  </head>
+  <body class="flex justify-center items-center h-screen w-screen">
+    <div class="calc-container flex justify-center w-fit h-fit items-center bg-blue-400 flex-col rounded-3xl">
+      <h1 class="text-3xl text-white drop-shadow-lg shadow-black m-3 text-center">The Mighty Calculator</h1>
+      <div class="operations"></div>
+      <input type="text" class="calc-input p-3 m-2 rounded-xl" placeholder="0"></input>
+      <ul class="buttons flex justify-center items-center flex-wrap flex-col">
+        <div class="flex">
+          <li class="btn">CLEAR</li>
+          <li class="btn">DEL</li>
+        </div>
+        <div class="inputs grid grid-cols-4 mb-6">
+          <li class="btn">7</li>
+          <li class="btn">8</li>
+          <li class="btn">9</li>
+          <li class="btn">/</li>
+          <li class="btn">4</li>
+          <li class="btn">5</li>
+          <li class="btn">6</li>
+          <li class="btn">*</li>
+          <li class="btn">1</li>
+          <li class="btn">2</li>
+          <li class="btn">3</li>
+          <li class="btn">+</li>
+          <li class="btn">.</li>
+          <li class="btn">0</li>
+          <li class="btn">=</li>
+          <li class="btn">-</li>
+        </div>
+      </ul>
+    </div>
+  </body>
+</html>
