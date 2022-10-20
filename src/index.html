@@ -11,7 +11,7 @@
   <body class="flex justify-center items-center h-screen w-screen bg-blue-500">
     <div class="calc-container flex justify-center w-fit h-fit items-center bg-blue-400 flex-col rounded-3xl border-2 shadow-neutral-700 shadow-xl">
       <h1 class="text-3xl text-white m-3 text-center">The Mighty Calculator</h1>
-      <div class="operations flex justify-end items-center p-3 w-64 h-6 bg-white rounded-md text-right border border-blue-500 shadow-inner shadow-neutral-700"></div>
+      <div class="operations flex justify-end items-center p-3 w-64 h-6 bg-white rounded-md text-right border border-blue-500 shadow-inner shadow-neutral-700 overflow-hidden"></div>
       <input type="text" class="number-input p-3 m-2 rounded-xl text-right border border-blue-500 shadow-inner shadow-neutral-700 disabled:bg-white"" placeholder="0" disabled></input>
       <ul class="buttons flex justify-center items-center flex-wrap flex-col">
         <div class="flex">
@@ -31,7 +31,7 @@
           <li class="btn" data-type='num'>2</li>
           <li class="btn" data-type='num'>3</li>
           <li class="btn" data-type="ops">+</li>
-          <li class="btn">.</li>
+          <li class="btn" data-type="float">.</li>
           <li class="btn" data-type='num'>0</li>
           <li class="btn" data-type="equal">=</li>
           <li class="btn" data-type="ops">-</li>
