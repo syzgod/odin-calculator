@@ -6,40 +6,37 @@ const equalBtn = document.querySelector('[data-type="equal"]');
 const clearBtn = document.querySelector(".clear-btn");
 const delBtn = document.querySelector(".del-btn");
 
-let num1, num2, operation;
+let num1, num2, operator, result;
 
-function addition(num1, num2) {
+function addition() {
   return num1 + num2;
 }
 
-function subtraction(num1, num2) {
+function subtraction() {
   return num1 - num2;
 }
 
-function multiplication(num1, num2) {
+function multiplication() {
   return num1 * num2;
 }
 
-function division(num1, num2) {
+function division() {
   return num1 / num2;
 }
 
-function operate(operation, num1, num2) {
-  switch (operation) {
+function operate() {
+  switch (operator) {
     case "+":
-      addition(num1, num2);
-      break;
+      return addition(num1, num2);
     case "-":
-      subtraction(num1, num2);
-      break;
-    case "/":
-      division(num1, num2);
-      break;
+      return subtraction(num1, num2);
     case "*":
-      multiplication(num1, num2);
-      break;
+      return multiplication(num1, num2);
+    case "/":
+      if (num2 === 0) return null;
+      else return division(num1, num2);
     default:
-      console.log("default");
+      return null;
   }
 }
 
@@ -50,8 +47,8 @@ buttons.forEach((el) =>
     }
     ops.innerText += e.target.innerText;
     if (e.target.dataset.type === "ops") {
-      operation = e.target.innerText;
-      console.log(operation);
+      operator = e.target.innerText;
+      console.log(operator);
       num1 = +numInput.value;
       numInput.value = "";
       console.log(num1);
@@ -59,19 +56,16 @@ buttons.forEach((el) =>
   })
 );
 
-equalBtn.addEventListener("click", (operation, num1) => {
+equalBtn.addEventListener("click", () => {
   num2 = +numInput.value;
   console.log(num2);
-  numInput.value = operate(operation, num1, num2);
+  console.log(operator);
+  numInput.value = operate();
   ops.innerText += numInput.value;
 });
 
 clearBtn.addEventListener("click", () => {
-  numInput.value = "";
-  ops.innerText = "";
-  num1 = "";
-  num2 = "";
-  operation = "";
+  numInput.value = ops.innerText = num1 = num2 = operator = "";
 });
 
 delBtn.addEventListener("click", () => {
